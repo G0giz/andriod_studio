@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="rtl"
+    android:orientation="vertical"
+    android:weightSum="20">
+
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:fillViewport="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:layoutDirection="rtl"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            v
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/first_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30sp"
+                android:backgroundTint="#FFFFFF"
+                android:gravity="center"
+                android:text="ראשונות"
+                style="@style/Widget.Material3.Button.TextButton.Icon"
+                android:textColor="@android:color/tab_indicator_text"
+                android:textSize="20sp"
+                app:icon="@drawable/icon_first"
+                app:iconPadding="10dp"
+                app:iconTintMode="screen"
+                app:iconSize="25dp"
+                app:iconTint="@null"
+                app:iconGravity="end"/>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/main_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30sp"
+                android:backgroundTint="#FFFFFF"
+                android:gravity="center"
+                android:text="עיקריות"
+                style="@style/Widget.Material3.Button.TextButton.Icon"
+                android:textColor="@android:color/tab_indicator_text"
+                android:textSize="20sp"
+                app:icon="@drawable/icon_mains"
+                app:iconPadding="10dp"
+                app:iconTintMode="screen"
+                app:iconSize="25dp"
+                app:iconTint="@null"
+                app:iconGravity="end"/>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/drink_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30sp"
+                android:backgroundTint="#FFFFFF"
+                android:gravity="center"
+                android:text="שתייה"
+                style="@style/Widget.Material3.Button.TextButton.Icon"
+                android:textColor="@android:color/tab_indicator_text"
+                android:textSize="20sp"
+                app:icon="@drawable/icon_drinik"
+                app:iconPadding="10dp"
+                app:iconTintMode="screen"
+                app:iconSize="25dp"
+                app:iconTint="@null"
+                app:iconGravity="end"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30sp"
+                android:backgroundTint="#FFFFFF"
+                android:gravity="center"
+                android:text="יינות"
+                style="@style/Widget.Material3.Button.TextButton.Icon"
+                android:textColor="@android:color/tab_indicator_text"
+                android:textSize="20sp"
+                app:icon="@drawable/icon_wine"
+                app:iconPadding="10dp"
+                app:iconTintMode="screen"
+                app:iconSize="25dp"
+                app:iconTint="@null"
+                app:iconGravity="end"/>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/dessert_menu"
+                style="@style/Widget.Material3.Button.TextButton.Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30sp"
+                android:gravity="center"
+                android:text="קינוחים"
+                android:backgroundTint="#FFFFFF"
+                android:textColor="@android:color/tab_indicator_text"
+                android:textSize="20sp"
+                app:icon="@drawable/icon_dessert"
+                app:iconPadding="10dp"
+                app:iconTintMode="screen"
+                app:iconSize="25dp"
+                app:iconTint="@null"
+                app:iconGravity="end"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30sp"
+                android:backgroundTint="#FFFFFF"
+                android:gravity="center"
+                android:text="מיוחדים"
+                style="@style/Widget.Material3.Button.TextButton.Icon"
+                android:textColor="@android:color/tab_indicator_text"
+                android:textSize="20sp"
+                app:icon="@drawable/icon_special"
+                app:iconPadding="10dp"
+                app:iconTintMode="screen"
+                app:iconSize="25dp"
+                app:iconTint="@null"
+                app:iconGravity="end"/>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleViewMenu5"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="15" />
+
+
+</LinearLayout>

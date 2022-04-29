@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:id="@+id/group_first">
+        <item
+            android:id="@+id/first_dish"
+            android:title="מנות ראשונות"
+            />
+    </group>
+
+    <group android:id="@+id/group_main">
+        <item
+            android:id="@+id/main_dish"
+            android:title="מנות עיקריות" />
+    </group>
+
+    <group android:id="@+id/group_drink">
+        <item
+            android:id="@+id/drinks"
+            android:title="שתייה" />
+    </group>
+
+    <group android:id="@+id/group_ddessert">
+        <item
+            android:id="@+id/dessert_dish"
+            android:title="קינוחים" />
+    </group>
+
+
+</menu>

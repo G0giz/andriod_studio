@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/yuval/.gradle/caches/transforms-3/a18afa04bd4b97558a10108619aa235e/transformed/jetified-hollyviewpager-1.0.1/res/layout/hvp_header_placeholder.xml" value="0.23541666666666666" />
+        <entry key="..\:/Users/yuval/AndroidStudioProjects/NavigationDrawer/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.26927083333333335" />
+        <entry key="..\:/Users/yuval/AndroidStudioProjects/NavigationDrawer/app/src/main/res/drawable/button_rounded.xml" value="0.34629629629629627" />
+        <entry key="..\:/Users/yuval/AndroidStudioProjects/NavigationDrawer/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.26927083333333335" />
+        <entry key="..\:/Users/yuval/AndroidStudioProjects/NavigationDrawer/app/src/main/res/drawable/ic_launcher_background.xml" value="0.26927083333333335" />
+        <entry key="..\:/Users/yuval/AndroidStudioProjects/NavigationDrawer/app/src/main/res/drawable/ic_search_black_24dp.xml" value="0.26927083333333335" />
+        <entry key="..\:/Users/yuval/AndroidStudioProjects/NavigationDrawer/app/src/main/res/drawable/image_rounded.xml" value="0.37083333333333335" />
+        <entry key="..\:/Users/yuval/AndroidStudioProjects/NavigationDrawer/app/src/main/res/drawable/new_button.xml" value="0.2515625" />
+        <entry key="..\:/Users/yuval/AndroidStudioProjects/NavigationDrawer/app/src/main/res/layout/activity_cart.xml" value="0.25" />
+        <entry key="..\:/Users/yuval/AndroidStudioProjects/NavigationDrawer/app/src/main/res/layout/activity_coordinator_menu.xml" value="0.23541666666666666" />
+        <entry key="..\:/Users/yuval/AndroidStudioProjects/NavigationDrawer/app/src/main/res/layout/activity_drawer.xml" value="0.3546875" />
+        <entry key="..\:/Users/yuval/AndroidStudioProjects/NavigationDrawer/app/src/main/res/layout/activity_holly_view_pager.xml" value="0.23541666666666666" />
+        <entry key="..\:/Users/yuval/AndroidStudioProjects/NavigationDrawer/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/yuval/AndroidStudioProjects/NavigationDrawer/app/src/main/res/layout/activity_main2.xml" value="0.3546875" />
+        <entry key="..\:/Users/yuval/AndroidStudioProjects/NavigationDrawer/app/src/main/res/layout/activity_menu.xml" value="0.3546875" />
+        <entry key="..\:/Users/yuval/AndroidStudioProjects/NavigationDrawer/app/src/main/res/layout/activity_recycler_bubble.xml" value="0.23541666666666666" />
+        <entry key="..\:/Users/yuval/AndroidStudioProjects/NavigationDrawer/app/src/main/res/layout/activity_recycler_tab_layoutt.xml" value="0.33" />
+        <entry key="..\:/Users/yuval/AndroidStudioProjects/NavigationDrawer/app/src/main/res/layout/activity_spark_button.xml" value="0.23541666666666666" />
+        <entry key="..\:/Users/yuval/AndroidStudioProjects/NavigationDrawer/app/src/main/res/layout/activity_test2.xml" value="0.3546875" />
+        <entry key="..\:/Users/yuval/AndroidStudioProjects/NavigationDrawer/app/src/main/res/layout/card_view.xml" value="0.33" />
+        <entry key="..\:/Users/yuval/AndroidStudioProjects/NavigationDrawer/app/src/main/res/layout/cart_card_view.xml" value="0.33" />
+        <entry key="..\:/Users/yuval/AndroidStudioProjects/NavigationDrawer/app/src/main/res/layout/cart_view.xml" value="0.19739583333333333" />
+        <entry key="..\:/Users/yuval/AndroidStudioProjects/NavigationDrawer/app/src/main/res/layout/pop_up.xml" value="0.33" />
+        <entry key="..\:/Users/yuval/AndroidStudioProjects/NavigationDrawer/app/src/main/res/layout/pop_up_layout.xml" value="0.4677734375" />
+        <entry key="..\:/Users/yuval/AndroidStudioProjects/NavigationDrawer/app/src/main/res/layout/test.xml" value="0.35714285714285715" />
+        <entry key="..\:/Users/yuval/AndroidStudioProjects/NavigationDrawer/app/src/main/res/layout/tool_bar_title.xml" value="0.3546875" />
+        <entry key="..\:/Users/yuval/AndroidStudioProjects/NavigationDrawer/app/src/main/res/menu/main_menu.xml" value="0.3546875" />
+        <entry key="..\:/Users/yuval/AndroidStudioProjects/NavigationDrawer/app/src/main/res/menu/navigation_menu.xml" value="0.3546875" />
+        <entry key="..\:/Users/yuval/AndroidStudioProjects/NavigationDrawer/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.36203703703703705" />
+        <entry key="..\:/Users/yuval/AndroidStudioProjects/NavigationDrawer/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.36203703703703705" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
