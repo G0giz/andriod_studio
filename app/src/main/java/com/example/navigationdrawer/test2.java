@@ -27,6 +27,7 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.button.MaterialButton;
 
 import java.util.ArrayList;
@@ -49,6 +50,7 @@ public class test2 extends AppCompatActivity implements View.OnClickListener, Di
 
     MaterialButton select_button = null;
     DishDialog dishDialog;
+    MaterialToolbar materialToolbar;
 
     @Override
     public void onBackPressed() {
@@ -58,17 +60,21 @@ public class test2 extends AppCompatActivity implements View.OnClickListener, Di
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
+        /*
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setCustomView(R.layout.tool_bar_title);
+        */
+
         setContentView(R.layout.test);
 
+        /*
         // calling the action bar
         ActionBar actionBar = getSupportActionBar();
         // Customize the back button
         actionBar.setHomeAsUpIndicator(R.drawable.ic_baseline_home_24);
         // showing the back button in action bar
         actionBar.setDisplayHomeAsUpEnabled(true);
-
+*/
 
         intDish();
         intViews();
@@ -77,6 +83,7 @@ public class test2 extends AppCompatActivity implements View.OnClickListener, Di
 
     }
 
+    /*
     // this event will enable the back
     // function to the button on press
     @Override
@@ -91,17 +98,28 @@ public class test2 extends AppCompatActivity implements View.OnClickListener, Di
         }
         return super.onOptionsItemSelected(item);
     }
-
+*/
     private void intButtons() {
         first_lay.setOnClickListener(this);
         main_lay.setOnClickListener(this);
         drink_lay.setOnClickListener(this);
         dessert_lay.setOnClickListener(this);
 
+        materialToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(test2.this, MainActivity2.class);
+                i.putExtra("cart", cart);
+                i.putExtra("cart_id", cart_id);
+                startActivity(i);
+            }
+        });
+
     }
 
     private void intViews() {
 
+        materialToolbar = findViewById(R.id.topAppBar);
         parent = findViewById(R.id.parent_layout);
         recyclerView = findViewById(R.id.recycleViewMenu5);
         mains.add(arr[0]);
@@ -180,7 +198,6 @@ public class test2 extends AppCompatActivity implements View.OnClickListener, Di
             case R.id.dessert_menu:
                 intAdapter(dessert);
                 break;
-
         }
 
     }
