@@ -21,12 +21,14 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.button.MaterialButton;
 
 import java.util.ArrayList;
@@ -46,9 +48,12 @@ public class test2 extends AppCompatActivity implements View.OnClickListener, Di
     ArrayList<Integer> cart_id = new ArrayList<Integer>(),cart_id_back = new ArrayList<Integer>();
     Dish[] dessert_arr = new Dish[2];
     LinearLayout parent;
-
+    String message,message2;
     MaterialButton select_button = null;
     DishDialog dishDialog;
+    MaterialToolbar materialToolbar;
+    ImageButton shop;
+
 
     @Override
     public void onBackPressed() {
@@ -58,16 +63,15 @@ public class test2 extends AppCompatActivity implements View.OnClickListener, Di
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
-        getSupportActionBar().setCustomView(R.layout.tool_bar_title);
+
         setContentView(R.layout.test);
 
-        // calling the action bar
-        ActionBar actionBar = getSupportActionBar();
-        // Customize the back button
-        actionBar.setHomeAsUpIndicator(R.drawable.ic_baseline_home_24);
-        // showing the back button in action bar
-        actionBar.setDisplayHomeAsUpEnabled(true);
+        Intent intent=getIntent();
+        message=intent.getStringExtra(mainmenu.desert);
+        message2=intent.getStringExtra(mainmenu.mainOf);
+        if (message==null)
+            message=message2;
+
 
 
         intDish();
@@ -77,31 +81,29 @@ public class test2 extends AppCompatActivity implements View.OnClickListener, Di
 
     }
 
-    // this event will enable the back
-    // function to the button on press
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                Intent i = new Intent(test2.this, MainActivity2.class);
-                i.putExtra("cart", cart);
-                i.putExtra("cart_id", cart_id);
-                startActivity(i);
-                return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
+
 
     private void intButtons() {
+        shop.setOnClickListener(this);
         first_lay.setOnClickListener(this);
         main_lay.setOnClickListener(this);
         drink_lay.setOnClickListener(this);
         dessert_lay.setOnClickListener(this);
+        materialToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(test2.this,mainmenu.class);
+                i.putExtra("cart",cart);
+                i.putExtra("cart_id",cart_id);
+                startActivity(i);
+            }
+        });
 
     }
 
     private void intViews() {
-
+        shop=findViewById(R.id.cart);
+        materialToolbar=findViewById(R.id.topAppBar);
         parent = findViewById(R.id.parent_layout);
         recyclerView = findViewById(R.id.recycleViewMenu5);
         mains.add(arr[0]);
@@ -110,7 +112,15 @@ public class test2 extends AppCompatActivity implements View.OnClickListener, Di
         mains.add(arr[3]);
         dessert.add(dessert_arr[0]);
         dessert.add(dessert_arr[1]);
-        intAdapter(mains);
+        switch (message)
+        {
+            case "עקריות":
+                intAdapter(mains);
+                break;
+            case "קינוחים":
+                intAdapter(dessert);
+                break;
+        }
 
         //layout
         first_lay = findViewById(R.id.first_menu);
@@ -165,10 +175,10 @@ public class test2 extends AppCompatActivity implements View.OnClickListener, Di
                 select_button.setTextColor(Color.parseColor("#808080"));
             }
             select_button = getButton(v);
+            Toast.makeText(test2.this, select_button.getText(), Toast.LENGTH_LONG).show();
             select_button.setBackgroundColor(Color.parseColor("#3B5BBDED"));
             select_button.setTextColor(Color.parseColor("#1684E4"));
         }
-
         switch (v.getId()) {
             case R.id.first_menu:
                 break;
@@ -180,6 +190,17 @@ public class test2 extends AppCompatActivity implements View.OnClickListener, Di
             case R.id.dessert_menu:
                 intAdapter(dessert);
                 break;
+            case R.id.cart:
+                if(cart.isEmpty())
+                {
+                    return;
+                }
+                Intent i=new Intent(test2.this,CartActivity.class);
+                i.putExtra("cart",cart);
+                i.putExtra("cart_id",cart_id);
+                startActivity(i);
+                break;
+
 
         }
 

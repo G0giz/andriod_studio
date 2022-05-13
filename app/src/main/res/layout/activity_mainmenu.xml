@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="13"
+    android:orientation="vertical"
+    tools:context=".mainmenu">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_weight="1.5"
+        android:gravity="center"
+        android:text="WELCOME"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:text="מנות מומלצות"
+        android:textSize="26dp"
+        android:textStyle="bold" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:layout_width="match_parent"
+        android:id="@+id/viewPagerImageSlider"
+        android:layout_height="160dp"
+        android:paddingStart="80dp"
+        android:paddingEnd="80dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        >
+
+        <TextView
+            android:id="@+id/First"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg"
+            android:gravity="center"
+            android:text="ראשונות"
+            android:textSize="20dp"
+            android:layout_marginLeft="26dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/Main"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/bg"
+            android:gravity="center"
+            android:text="עקריות"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        >
+
+        <TextView
+            android:id="@+id/Desert"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg"
+            android:gravity="center"
+            android:text="קינוחים"
+            android:textSize="20dp"
+            android:layout_marginLeft="26dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/Drinks"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg"
+            android:gravity="center"
+            android:text="שתייה"
+            android:textSize="20dp"
+            android:layout_marginLeft="20dp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

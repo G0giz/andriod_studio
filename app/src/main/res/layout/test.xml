@@ -7,7 +7,31 @@
     android:layoutDirection="rtl"
     android:orientation="vertical"
     android:weightSum="20">
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5">
 
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/topAppBar"
+                style="@style/Widget.MaterialComponents.Toolbar.Primary"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:titleCentered="true"
+                app:navigationIcon="@drawable/ic_baseline_home_24"
+                app:title="מסעדה כלשהי" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
     <HorizontalScrollView
         android:layout_width="match_parent"
@@ -23,8 +47,6 @@
             android:layoutDirection="rtl"
             android:orientation="horizontal"
             android:padding="10dp">
-
-            v
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/first_menu"
@@ -52,7 +74,7 @@
                 android:layout_marginLeft="30sp"
                 android:backgroundTint="#FFFFFF"
                 android:gravity="center"
-                android:text="עיקריות"
+                android:text="עקריות"
                 style="@style/Widget.Material3.Button.TextButton.Icon"
                 android:textColor="@android:color/tab_indicator_text"
                 android:textSize="20sp"
@@ -148,12 +170,19 @@
         android:layout_height="0dp"
         android:layout_weight="1" />
 
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycleViewMenu5"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="15" />
+        android:layout_weight="15.6"/>
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/cart"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/roundedcorners"
+        android:foreground="@drawable/ic_baseline_shopping_cart_24"/>
 
 
 </LinearLayout>

@@ -31,8 +31,7 @@ public class CartActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
-        getSupportActionBar().setCustomView(R.layout.tool_bar_title);
+
         setContentView(R.layout.activity_cart);
 
         cart = (ArrayList<Dish>) getIntent().getSerializableExtra("cart");
