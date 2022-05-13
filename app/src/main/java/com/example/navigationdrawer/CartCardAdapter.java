@@ -22,7 +22,6 @@ public class CartCardAdapter extends RecyclerView.Adapter<CartCardAdapter.MyView
     ArrayList<Integer> cart_id;
     Context context;
 
-
     public CartCardAdapter(Context context, ArrayList<Dish> cart_list, ArrayList<Integer> cart_id) {
         this.cart_list = cart_list;
         this.cart_id = cart_id;
@@ -94,6 +93,7 @@ public class CartCardAdapter extends RecyclerView.Adapter<CartCardAdapter.MyView
                     dish.setAmount(++total_amount);
                     total_price += dish_price;
                     dish.setTotal_price(total_price);
+                    ((CartActivity) context).SetPaytext(dish_price);
                     break;
                 case R.id.btnMinusCart:
                     if (total_amount == 1)
@@ -101,6 +101,7 @@ public class CartCardAdapter extends RecyclerView.Adapter<CartCardAdapter.MyView
                     dish.setAmount(--total_amount);
                     total_price -= dish_price;
                     dish.setTotal_price(total_price);
+                    ((CartActivity) context).SetPaytext(-dish_price);
                     break;
                 case R.id.btnDelCart:
                     removeItem(getAdapterPosition());
@@ -113,10 +114,12 @@ public class CartCardAdapter extends RecyclerView.Adapter<CartCardAdapter.MyView
         }
 
         private void removeItem(int position) {
+            double total_price = cart_list.get(position).getTotal_price();
             cart_list.remove(position);
             notifyItemRemoved(position);
             notifyItemRangeChanged(position, cart_list.size());
             cart_id.remove(position);
+            ((CartActivity) context).SetPaytext(-total_price);
         }
     }
 }

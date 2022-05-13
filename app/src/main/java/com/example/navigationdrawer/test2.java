@@ -52,8 +52,11 @@ public class test2 extends AppCompatActivity implements View.OnClickListener, Di
     MaterialButton select_button = null;
     DishDialog dishDialog;
     MaterialToolbar materialToolbar;
+<<<<<<< HEAD
     ImageButton shop;
 
+=======
+>>>>>>> 699a77898240aaf05429ee443fd67ed37fc5238e
 
     @Override
     public void onBackPressed() {
@@ -63,6 +66,7 @@ public class test2 extends AppCompatActivity implements View.OnClickListener, Di
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
+<<<<<<< HEAD
 
         setContentView(R.layout.test);
 
@@ -73,6 +77,23 @@ public class test2 extends AppCompatActivity implements View.OnClickListener, Di
             message=message2;
 
 
+=======
+        /*
+        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        getSupportActionBar().setCustomView(R.layout.tool_bar_title);
+        */
+
+        setContentView(R.layout.test);
+
+        /*
+        // calling the action bar
+        ActionBar actionBar = getSupportActionBar();
+        // Customize the back button
+        actionBar.setHomeAsUpIndicator(R.drawable.ic_baseline_home_24);
+        // showing the back button in action bar
+        actionBar.setDisplayHomeAsUpEnabled(true);
+*/
+>>>>>>> 699a77898240aaf05429ee443fd67ed37fc5238e
 
         intDish();
         intViews();
@@ -81,8 +102,27 @@ public class test2 extends AppCompatActivity implements View.OnClickListener, Di
 
     }
 
+<<<<<<< HEAD
 
 
+=======
+    /*
+    // this event will enable the back
+    // function to the button on press
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                Intent i = new Intent(test2.this, MainActivity2.class);
+                i.putExtra("cart", cart);
+                i.putExtra("cart_id", cart_id);
+                startActivity(i);
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+*/
+>>>>>>> 699a77898240aaf05429ee443fd67ed37fc5238e
     private void intButtons() {
         shop.setOnClickListener(this);
         first_lay.setOnClickListener(this);
@@ -99,11 +139,26 @@ public class test2 extends AppCompatActivity implements View.OnClickListener, Di
             }
         });
 
+        materialToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(test2.this, MainActivity2.class);
+                i.putExtra("cart", cart);
+                i.putExtra("cart_id", cart_id);
+                startActivity(i);
+            }
+        });
+
     }
 
     private void intViews() {
+<<<<<<< HEAD
         shop=findViewById(R.id.cart);
         materialToolbar=findViewById(R.id.topAppBar);
+=======
+
+        materialToolbar = findViewById(R.id.topAppBar);
+>>>>>>> 699a77898240aaf05429ee443fd67ed37fc5238e
         parent = findViewById(R.id.parent_layout);
         recyclerView = findViewById(R.id.recycleViewMenu5);
         mains.add(arr[0]);
@@ -190,6 +245,7 @@ public class test2 extends AppCompatActivity implements View.OnClickListener, Di
             case R.id.dessert_menu:
                 intAdapter(dessert);
                 break;
+<<<<<<< HEAD
             case R.id.cart:
                 if(cart.isEmpty())
                 {
@@ -202,6 +258,8 @@ public class test2 extends AppCompatActivity implements View.OnClickListener, Di
                 break;
 
 
+=======
+>>>>>>> 699a77898240aaf05429ee443fd67ed37fc5238e
         }
 
     }

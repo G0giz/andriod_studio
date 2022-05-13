@@ -12,9 +12,16 @@
         android:layout_height="0dp"
         android:layout_weight="1.5">
 
+<<<<<<< HEAD
         <com.google.android.material.divider.MaterialDivider
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+=======
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5">
+>>>>>>> 699a77898240aaf05429ee443fd67ed37fc5238e
 
         <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
@@ -32,11 +39,18 @@
         </com.google.android.material.appbar.AppBarLayout>
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
+<<<<<<< HEAD
+=======
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+>>>>>>> 699a77898240aaf05429ee443fd67ed37fc5238e
 
     <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="2"
+        android:layout_weight="1.5"
         android:fillViewport="true">
 
 
@@ -46,80 +60,89 @@
             android:layout_gravity="right"
             android:layoutDirection="rtl"
             android:orientation="horizontal"
+<<<<<<< HEAD
             android:padding="10dp">
+=======
+            android:padding="5dp">
+>>>>>>> 699a77898240aaf05429ee443fd67ed37fc5238e
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/first_menu"
+                style="@style/Widget.Material3.Button.TextButton.Icon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30sp"
                 android:backgroundTint="#FFFFFF"
                 android:gravity="center"
                 android:text="ראשונות"
-                style="@style/Widget.Material3.Button.TextButton.Icon"
                 android:textColor="@android:color/tab_indicator_text"
                 android:textSize="20sp"
                 app:icon="@drawable/icon_first"
+                app:iconGravity="end"
                 app:iconPadding="10dp"
-                app:iconTintMode="screen"
                 app:iconSize="25dp"
                 app:iconTint="@null"
-                app:iconGravity="end"/>
+                app:iconTintMode="screen" />
 
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/main_menu"
+                style="@style/Widget.Material3.Button.TextButton.Icon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30sp"
                 android:backgroundTint="#FFFFFF"
                 android:gravity="center"
+<<<<<<< HEAD
                 android:text="עקריות"
                 style="@style/Widget.Material3.Button.TextButton.Icon"
+=======
+                android:text="עיקריות"
+>>>>>>> 699a77898240aaf05429ee443fd67ed37fc5238e
                 android:textColor="@android:color/tab_indicator_text"
                 android:textSize="20sp"
                 app:icon="@drawable/icon_mains"
+                app:iconGravity="end"
                 app:iconPadding="10dp"
-                app:iconTintMode="screen"
                 app:iconSize="25dp"
                 app:iconTint="@null"
-                app:iconGravity="end"/>
+                app:iconTintMode="screen" />
 
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/drink_menu"
+                style="@style/Widget.Material3.Button.TextButton.Icon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30sp"
                 android:backgroundTint="#FFFFFF"
                 android:gravity="center"
                 android:text="שתייה"
-                style="@style/Widget.Material3.Button.TextButton.Icon"
                 android:textColor="@android:color/tab_indicator_text"
                 android:textSize="20sp"
                 app:icon="@drawable/icon_drinik"
+                app:iconGravity="end"
                 app:iconPadding="10dp"
-                app:iconTintMode="screen"
                 app:iconSize="25dp"
                 app:iconTint="@null"
-                app:iconGravity="end"/>
+                app:iconTintMode="screen" />
 
             <com.google.android.material.button.MaterialButton
+                style="@style/Widget.Material3.Button.TextButton.Icon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30sp"
                 android:backgroundTint="#FFFFFF"
                 android:gravity="center"
                 android:text="יינות"
-                style="@style/Widget.Material3.Button.TextButton.Icon"
                 android:textColor="@android:color/tab_indicator_text"
                 android:textSize="20sp"
                 app:icon="@drawable/icon_wine"
+                app:iconGravity="end"
                 app:iconPadding="10dp"
-                app:iconTintMode="screen"
                 app:iconSize="25dp"
                 app:iconTint="@null"
-                app:iconGravity="end"/>
+                app:iconTintMode="screen" />
 
 
             <com.google.android.material.button.MaterialButton
@@ -128,35 +151,34 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30sp"
+                android:backgroundTint="#FFFFFF"
                 android:gravity="center"
                 android:text="קינוחים"
-                android:backgroundTint="#FFFFFF"
                 android:textColor="@android:color/tab_indicator_text"
                 android:textSize="20sp"
                 app:icon="@drawable/icon_dessert"
+                app:iconGravity="end"
                 app:iconPadding="10dp"
-                app:iconTintMode="screen"
                 app:iconSize="25dp"
                 app:iconTint="@null"
-                app:iconGravity="end"
-                />
+                app:iconTintMode="screen" />
 
             <com.google.android.material.button.MaterialButton
+                style="@style/Widget.Material3.Button.TextButton.Icon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30sp"
                 android:backgroundTint="#FFFFFF"
                 android:gravity="center"
                 android:text="מיוחדים"
-                style="@style/Widget.Material3.Button.TextButton.Icon"
                 android:textColor="@android:color/tab_indicator_text"
                 android:textSize="20sp"
                 app:icon="@drawable/icon_special"
+                app:iconGravity="end"
                 app:iconPadding="10dp"
-                app:iconTintMode="screen"
                 app:iconSize="25dp"
                 app:iconTint="@null"
-                app:iconGravity="end"/>
+                app:iconTintMode="screen" />
 
         </LinearLayout>
     </HorizontalScrollView>
